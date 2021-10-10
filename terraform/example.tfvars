@@ -21,6 +21,7 @@ fw_allow_udp_secret = []
 fw_ip_whitelist = ["xxx.xxx.xxx.xxx","xxx.xxx.xxx.xxx"]
 
 db_tier = "db-g1-small"
+db_deletion_protection = false
 db_version = "MYSQL_8_0"
 db_disk_size = 10
 db_root_pass = "Password@db"
