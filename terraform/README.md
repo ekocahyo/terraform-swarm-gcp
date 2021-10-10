@@ -69,15 +69,16 @@ terraform destroy --var-file="env-stage.tfvars"
 | fw_ip_whitelist     | Daftar IP yang boleh mengakses port tcp/udp secret                 | `list(string)` | n/a     | `["0.0.0.0"]`     |
 
 ## MySQL
-| Name         | Description                                                                        | Type     | Default | example           |
-|--------------|------------------------------------------------------------------------------------|----------|---------|-------------------|
-| db_tier      | Tipe / spec node yang ingin digunakan<br>*ref:gcloud sql tiers list --sort-by=RAM* | `string` | n/a     | `"db-g1-small"`   |
-| db_version   | Versi dari MySQL server                                                            | `string` | n/a     | `"MYSQL_8_0"`     |
-| db_disk_size | Ukuran disk untuk MySQL server (*satuan GB*)                                       | `number` | 10      | 10                |
-| db_root_pass | Password root MySQL                                                                | `string` | n/a     | `"Admin@123"`     |
-| db_name      | Nama Database yang ingin dibuat                                                    | `string` | n/a     | `"db_production"` |
-| db_user_apps | Username database untuk apps                                                       | `string` | n/a     | `"username"`      |
-| db_pass_apps | Password database untuk apps                                                       | `string` | n/a     | `"password"`      |
+| Name                   | Description                                                                        | Type     | Default | example           |
+|------------------------|------------------------------------------------------------------------------------|----------|---------|-------------------|
+| db_tier                | Tipe / spec node yang ingin digunakan<br>*ref:gcloud sql tiers list --sort-by=RAM* | `string` | n/a     | `"db-g1-small"`   |
+| db_deletion_protection | Set false jika ingin diperbolehkan hapus server database                           | `bool`   | `true`  | `true`            |
+| db_version             | Versi dari MySQL server                                                            | `string` | n/a     | `"MYSQL_8_0"`     |
+| db_disk_size           | Ukuran disk untuk MySQL server (*satuan GB*)                                       | `number` | 10      | 10                |
+| db_root_pass           | Password root MySQL                                                                | `string` | n/a     | `"Admin@123"`     |
+| db_name                | Nama Database yang ingin dibuat                                                    | `string` | n/a     | `"db_production"` |
+| db_user_apps           | Username database untuk apps                                                       | `string` | n/a     | `"username"`      |
+| db_pass_apps           | Password database untuk apps                                                       | `string` | n/a     | `"password"`      |
 
 # Outputs
 

@@ -2,6 +2,7 @@ resource "google_sql_database_instance" "mysql" {
     name = "${var.project_prefix_name}"
     database_version = "${var.db_version}"
     region = "${var.project_region}"
+    deletion_protection = var.db_deletion_protection
     settings {
         tier = "${var.db_tier}"
         disk_size = var.db_disk_size

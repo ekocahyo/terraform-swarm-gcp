@@ -97,6 +97,12 @@ variable "db_tier" {
   type = string
 }
 
+variable "db_deletion_protection" {
+  description = "value"
+  type = bool
+  default = true
+}
+
 variable "db_version" {
   description = "Versi dari MySQL server"
   type = string
