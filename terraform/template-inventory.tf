@@ -18,6 +18,6 @@ resource "null_resource" "cmd" {
     }
 
     provisioner "local-exec" {
-        command = "echo '${data.template_file.inventory.rendered}' > ../ansible/inventory"
+        command = "echo '${data.template_file.inventory.rendered}' > ../ansible/inventory-${var.project_prefix_name}"
     }
 }

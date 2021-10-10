@@ -93,22 +93,37 @@ variable "fw_ip_whitelist" {
 
 ############################## Database ##############################
 variable "db_tier" {
-  description = "value"
+  description = "Tipe / spec node yang ingin digunakan"
   type = string
 }
 
 variable "db_version" {
-  description = "value"
+  description = "Versi dari MySQL server"
   type = string
 }
 
 variable "db_disk_size" {
-  description = "value"
+  description = "Ukuran disk untuk MySQL server (satuan GB)"
   type = number
   default = 10
 }
 
 variable "db_root_pass" {
-  description = "value"
+  description = "Password root MySQL"
+  type = string
+}
+
+variable "db_name" {
+  description = "Nama Database yang ingin dibuat"
+  type = string
+}
+
+variable "db_user_apps" {
+  description = "Username database untuk apps"
+  type = string
+}
+
+variable "db_pass_apps" {
+  description = "Password database untuk apps"
   type = string
 }
