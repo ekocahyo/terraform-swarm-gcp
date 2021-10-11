@@ -133,3 +133,21 @@ variable "db_pass_apps" {
   description = "Password database untuk apps"
   type = string
 }
+
+variable "redis_tier" {
+  description = "Pilih STANDARD_HA atau BASIC"
+  type = string
+  default = "BASIC"
+}
+
+variable "redis_version" {
+  description = "Versi dari redis"
+  type = string
+  default = "REDIS_4_0"
+}
+
+variable "redis_size" {
+  description = "Kapasitas redis (satuan GB)"
+  type = number
+  default = 1
+}

@@ -1,7 +1,8 @@
 # Component
 - Computer engine for Docker Swarm (manager+worker)
-- Cloud SQL
-- Cloud Storage
+- Cloud SQL (MySQL)
+- Cloud Storage (Bucket)
+- Memory Storage (Redis)
 
 # How to play
 
@@ -79,6 +80,13 @@ terraform destroy --var-file="env-stage.tfvars"
 | db_name                | Nama Database yang ingin dibuat                                                    | `string` | n/a     | `"db_production"` |
 | db_user_apps           | Username database untuk apps                                                       | `string` | n/a     | `"username"`      |
 | db_pass_apps           | Password database untuk apps                                                       | `string` | n/a     | `"password"`      |
+
+## Memory storage with redis
+| Name          | Description                  | Type     | Default       | example       |
+|---------------|------------------------------|----------|---------------|---------------|
+| redis_tier    | Pilih STANDARD_HA atau BASIC | `string` | `BASIC`       | `BASIC`       |
+| redis_version | Versi dari redis             | `string` | `"REDIS_4_0"` | `"REDIS_4_0"` |
+| redis_size    | Kapasitas redis (satuan GB)  | number   | 1             | 1             |
 
 # Outputs
 
